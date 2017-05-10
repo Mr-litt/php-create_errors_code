@@ -49,7 +49,6 @@ class Application
             echo "start generate...\n";
             $start = $className.'::';
             $return = shell_exec("find $this->webRoot -name '*.php' ! -path './vendor' | xargs grep '$start'");
-            //$arr = explode("\r\n",$return);//windows
             $arr = explode("\n",$return);
             $codeList = [];
             foreach($arr as $str){
@@ -82,6 +81,7 @@ namespace $classNameSpaceName;
 
 class $className
 {
+
 EOT;
             foreach($write_list as $name=>$val) {
                 $template.="    const $name = $val;\n";
@@ -97,7 +97,7 @@ EOT;
 
 
     private function errorReport($msg){
-        echo "<p style='color:red;'>".$msg."</p>";
+        echo $msg."\n";
         exit;
     }
 }

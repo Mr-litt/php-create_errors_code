@@ -8,6 +8,7 @@ namespace app\helpful;
 
 class ErrorCode
 {
+    const MY_DEFINE_ERROR = 403;
     const ERROR_DEMO1 = 10001;
     const ERROR_DEMO2 = 10002;
 }

@@ -1,17 +1,19 @@
 <?php
 
+/**
+ * Application.php
+ *
+ * @author  Mr.litt<137057181@qq.com>
+ * @date    17-5-9
+ */
+
 namespace create_code;
 
-/**
- * Created by IntelliJ IDEA.
- * User: lihaitao
- * Date: 17-5-9
- * Time: 下午4:00
- */
 class Application
 {
     private $errorClass = null;
     private $webRoot = "";
+    private $minNum = 10000;
 
     public function __construct($config)
     {
@@ -24,6 +26,9 @@ class Application
             }
             $this->errorClass = $config["target"];
             $this->webRoot = $config["root"];
+            if(isset($config["min"]) && $config["min"]>0){
+                $this->minNum = intval($config["min"]);
+            }
         }catch (\Exception $e){
             $this->errorReport($e->getMessage());
         }
@@ -60,7 +65,7 @@ class Application
                 }
             }
 
-            $max = 10000;
+            $max = $this->minNum;
             $write_list = [];
             foreach($reflection->getConstants() as $const_name=>$val){
                 $write_list[$const_name] = $val;

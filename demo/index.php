@@ -1,9 +1,10 @@
 <?php
+
 /**
- * Created by IntelliJ IDEA.
- * User: tao
- * Date: 2017/5/9
- * Time: 19:13
+ * Application.php
+ *
+ * @author  Mr.litt<137057181@qq.com>
+ * @date    2017/5/9
  */
 
 include "app/helpful/ErrorCode.php";
@@ -14,6 +15,7 @@ use create_code\Application;
 $option = [
     "target"=>new ErrorCode(),  //错误文件类
     "root"=>__DIR__,    //项目根目录
+    "min"=>10000,    //选填，生成错误码基数,默认10000
 ];
 
 (new Application($option))->run();

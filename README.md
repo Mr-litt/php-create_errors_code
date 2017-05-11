@@ -1,4 +1,4 @@
-# PHP-Create_errors_code
+# php-create_errors_code
 
 ## Description
 这是一个生成PHP错误码的工具类。
@@ -26,7 +26,7 @@
 cd php/app/library
 
 # clone repository into app library dir
-git clone https://github.com/Mr-litt/create_errors_code.git
+git clone https://github.com/Mr-litt/php-create_errors_code.git
 ```
 
 ## Usage
@@ -42,7 +42,7 @@ namespace app\helpful;
 
 class ErrorCode
 {
-    const MY_DEFINE_ERROR = 403;//自己定义的错误码
+    const MY_DEFINE_ERROR = 403;    //自己定义的错误码
 }
 ```
 
@@ -59,21 +59,21 @@ class SiteService
     public function index(){
         $existError = true;
         if($existError){
-            echo ErrorCode::ERROR_DEMO1;//错误标识1
-            echo ErrorCode::ERROR_DEMO2;//错误标识2
+            echo ErrorCode::ERROR_DEMO1;    //错误标识1
+            echo ErrorCode::ERROR_DEMO2;    //错误标识2
         }
     }
 }
 ```
 
 
-3. 使用create_errors_code生成错误码
+3. 使用CreateErrorsCode类生成错误码
 
 ```php
 <?php
 
 use app\helpful\ErrorCode;
-use create_code\Application;
+use create_code\CreateErrorsCode;
 
 $option = [
     "target"=>new ErrorCode(),  //错误文件类
@@ -81,7 +81,7 @@ $option = [
     "min"=>10000,    //选填，生成错误码基数,默认10000
 ];
 
-(new Application($option))->run();
+(new CreateErrorsCode($option))->run();
 ```
 
 ## Demo
@@ -95,7 +95,7 @@ $option = [
         -service
             -SiteSerive.php //在你项目里使用定义错误标识
             ...
-        index.php   //使用create_errors_code生成错误码
+        index.php   //使用CreateErrorsCode类生成错误码
 ```
 
 ## License

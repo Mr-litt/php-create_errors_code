@@ -21,6 +21,12 @@
 
 ## Installation
 
+1. [composer](http://www.phpcomposer.com/)安装
+```shell
+composer require mr-litt/create_errors_code
+```
+
+2. 直接安装
 ```shell
 # change into app library directory
 cd php/app/library

@@ -1,0 +1,20 @@
+{
+    "name": "Mr-litt/create_errors_code",
+    "description": "a tool to create errors code",
+    "keywords": ["errors", "code"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mr-litt",
+            "email": "137057181@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "create_code\\": "src/create_code/"
+        }
+    }
+}

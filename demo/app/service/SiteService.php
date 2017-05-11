@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Application.php
+ * SiteService.php
  *
  * @author  Mr.litt<137057181@qq.com>
  * @date    2017/5/9
@@ -21,8 +21,8 @@ class SiteService
     public function index(){
         $existError = true;
         if($existError){
-            echo ErrorCode::ERROR_DEMO1;//错误标识1
-            echo ErrorCode::ERROR_DEMO2;//错误标识2
+            echo ErrorCode::ERROR_DEMO1;    //错误标识1
+            echo ErrorCode::ERROR_DEMO2;    //错误标识2
         }
     }
 }

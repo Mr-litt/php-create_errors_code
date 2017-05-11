@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Application.php
+ * CreateErrorsCode.php
  *
  * @author  Mr.litt<137057181@qq.com>
  * @date    17-5-9
@@ -9,7 +9,7 @@
 
 namespace create_code;
 
-class Application
+class CreateErrorsCode
 {
     private $errorClass = null;
     private $webRoot = "";
